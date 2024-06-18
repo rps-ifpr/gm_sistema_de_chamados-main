@@ -1,0 +1,55 @@
+@import "../../index.scss";
+
+.form-clientes {
+  display: flex;
+  flex-direction: column;
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+
+    .input-error {
+      border-color: #ff0000;
+
+      &:valid + label {
+        color: #ff0000;
+      }
+
+      &:focus {
+        border-color: #ff0000;
+      }
+
+      &:focus + label {
+        color: #ff0000;
+      }
+    }
+
+    label {
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+      color: $text;
+    }
+
+    input {
+      border: 0.1rem solid #dddddd;
+      border-radius: 0.5rem;
+      height: 5.6rem;
+      padding: 1rem 1.4rem;
+      outline: none;
+      font-size: 1.6rem;
+
+      &:focus {
+        border: 0.2rem solid $primary-blue;
+      }
+    }
+  }
+
+  .error-message {
+    color: #ff0000;
+    margin: 0.6rem 0 0;
+    font-size: 1.4rem;
+  }
+}

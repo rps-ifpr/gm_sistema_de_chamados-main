@@ -1,0 +1,49 @@
+@import "../../index.scss";
+
+select {
+  padding: 1.5rem 1.4rem;
+  font-size: 1.6rem;
+  color: $text;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #ccc;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    border: 0.2rem solid $primary-blue;
+  }
+}
+
+.radio-area {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    height: 3.6rem;
+    display: flex;
+    align-items: center;
+
+    label {
+      cursor: pointer;
+    }
+
+    input {
+      margin-right: 0.6rem;
+      cursor: pointer;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+  min-height: 20rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  color: $text;
+
+  &:focus {
+    outline: 0.2rem solid $primary-blue;
+    border: none;
+  }
+}

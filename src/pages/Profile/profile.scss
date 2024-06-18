@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.form-profile {
+  display: flex;
+  flex-direction: column;
+
+  .avatar-container {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 2rem;
+
+    img {
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    label {
+      color: #fff;
+      background-color: $primary-blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 2rem;
+      right: 0;
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgb(70, 139, 230);
+      }
+
+      svg {
+        margin-right: 0.6rem;
+      }
+    }
+
+    input {
+      width: 0.1rem;
+      height: 0.1rem;
+    }
+  }
+
+  .input-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+
+    label {
+      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+      color: $text;
+    }
+
+    input {
+      border: 0.1rem solid #dddddd;
+      border-radius: 0.5rem;
+      height: 5.6rem;
+      padding: 1rem 1.4rem;
+      outline: none;
+      font-size: 1.6rem;
+
+      &:focus:not(.email) {
+        border: 0.2rem solid $primary-blue;
+      }
+    }
+
+    .email {
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.btn-area {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 2rem;
+  }
+}

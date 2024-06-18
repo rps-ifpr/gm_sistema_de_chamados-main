@@ -1,0 +1,149 @@
+@import "../../index.scss";
+
+.table-section {
+  background-color: #fafafa;
+  padding: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.2rem;
+  // inset: 0.1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+
+  th {
+    border-bottom: 0.1rem solid #ccc;
+    padding: 1.2rem 0;
+  }
+
+  td {
+    padding: 1.2rem 0;
+    text-align: center;
+    border-bottom: 0.1rem solid #ccc;
+  }
+
+  .search,
+  .edit {
+    display: flex;
+    width: 2.6rem;
+    height: 2.6rem;
+    align-items: center;
+    border: none;
+    outline: none;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .actions-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+
+  .search {
+    background-color: $primary-blue;
+    margin-right: 0.5rem;
+  }
+
+  .edit {
+    background-color: #ffbb00;
+    margin-right: 0.5rem;
+  }
+
+  td[data-label="Status"] {
+    span {
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+      color: #fff;
+    }
+  }
+
+  tr {
+    background-color: #fff;
+  }
+}
+
+.area-btn-add-chamados {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.4rem;
+
+  a {
+    background-color: #3bc43b;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 1.2rem 1.6rem;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    overflow: auto;
+    thead {
+      tr {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        position: absolute;
+        overflow: hidden;
+      }
+    }
+
+    th {
+      margin: -1px;
+      overflow: hidden;
+      position: absolute;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+      border-bottom: 0.1rem solid #ccc;
+      padding: 0.8rem 0;
+
+      &::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    tr {
+      margin-bottom: 2rem;
+      display: block;
+      background-color: #f1f1f1;
+      border: 0.1rem solid #ccc;
+      border-radius: 0.5rem;
+      padding: 0.6rem 0.6rem 0 0.6rem;
+      // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+
+  .actions-table {
+    justify-content: flex-end;
+  }
+}
